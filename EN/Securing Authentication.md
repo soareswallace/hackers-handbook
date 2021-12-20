@@ -32,7 +32,7 @@ There are couple of rules that should be required to be in place in every system
 
 - The various authentications mechanisms used by the application should always protected information from disclosure. Any parameters in every query should always be validated between the users privileges.
 - Every unknown or unhandled exceptions should always be treated as generic from a client stand point. This avoids information leakage between exceptions.
-- Following the "Don't give attackers information" if the application employs account lockout do not give how many minutes, for how many times or which account have been locked.
+- Following the "Don't give attackers information" if the application employs account lockout do not give how many minutes or which account have been locked.
 - If the application supports self-registration it should:
     - Generate unique and unpredictable usernames for each new user.
     - It can use email adress as username and it should send to the email an unique, unguessable URL to the registered email telling the user to following procedures.
@@ -40,7 +40,7 @@ There are couple of rules that should be required to be in place in every system
 
 ## Prevent Brute-Force Attacks
 
-- Implement challenges when important actions are made, such as login, password changes, email changes, password changes.
+- Implement challenges when important actions are made, such as login, password changes and email changes.
 - Use unpredictable usernames preventing user enumaration.
 - Account locking balancing the time for reactivation with actions required. However it should never show which of the accounts are locked. If this was the implementation and an account is locked it should never check the credentials during lock to avoid different response or response times during brute-force attacks.
 - Challenges, such as CAPTCHAs, can also help preventing brute-force attacks.
